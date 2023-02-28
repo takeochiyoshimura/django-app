@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!-- saved from url=(0212)https://yastatic.net/market-export/_/h/gtmmarket.html?pageType=product&pageId=market%3Aproduct&siteType=desktop&userId=c2294eb211f39188eaf528904d8982b431e312adedb0a994088fa365a1d8dc79&regionId=8&experiments=false -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<script type="text/javascript" async="" id="topmailru-code" src="./top-fwz1_mail_ru_js_code.js.Без названия"></script><script async="" src="./gtm.js.Без названия"></script><script>
+    var dataLayer = [];
+    var regexCheckMarket = /(.*)(\.)?market(.*)\.yandex/g;
+
+    var assign = function (defaults, options) {
+        var extended = {};
+        var prop;
+        for (prop in defaults) {
+            if (Object.prototype.hasOwnProperty.call(defaults, prop) && defaults[prop] != '') {
+                extended[prop] = defaults[prop];
+            }
+        }
+        for (prop in options) {
+            if (Object.prototype.hasOwnProperty.call(options, prop) && options[prop] != '') {
+                extended[prop] = options[prop];
+            }
+        }
+        return extended;
+    };
+
+    // Cross-browser event listener
+    var addEvent = function (el, evt, fn) {
+        if (el.addEventListener) {
+            el.addEventListener(evt, fn);
+        } else if (el.attachEvent) {
+            el.attachEvent('on' + evt, function (evt) {
+                fn.call(el, evt);
+            });
+        } else if (typeof el['on' + evt] === 'undefined' || el['on' + evt] === null) {
+            el['on' + evt] = function (evt) {
+                fn.call(el, evt);
+            };
+        }
+    };
+
+    (function (window) {
+        window.dataLayer = window.dataLayer || [];
+
+        var query = window.location.search.substring(1).split("&");
+        var querylength = query.length;
+        var params = {};
+
+        for (var i = 0; i < querylength; ++i) {
+            var getVar = query[i].split("=");
+
+            params[decodeURIComponent(getVar[0])] = typeof (getVar[1]) == "undefined" ? "" : decodeURIComponent(getVar[1]);
+        }
+
+        dataLayer.push(params);
+
+        addEvent(window, 'message', function (message) {
+            // Р»РѕРіРёРєР° РїРёРЅРі-РїРѕРЅРі
+            if (message.data === 'ready') {
+                window.parent.postMessage('readyForMessage', '*');
+                return;
+            }
+            var dataLayer = window.dataLayer || (window.dataLayer = []); // Safely instantiate dataLayer locally
+            var origin = message.origin;
+
+            try {
+                var messageData = JSON.parse(message.data);
+            } catch (e) {
+                return;
+            }
+
+            messageData = assign(params, messageData);
+
+            if (origin.match(regexCheckMarket)) {
+                dataLayer.push(messageData);
+            }
+        });
+        window.parent.postMessage('readyForMessage', '*');
+    })(window)
+
+</script>
+<!-- Google Tag Manager -->
+<script>(function (w, d, s, l, i) {
+    w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+            new Date().getTime(), event: 'gtm.js'
+    }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+            'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-NWV5KMR');</script>
+<!-- End Google Tag Manager -->
+</head>
+<body>
+
+
+<script type="text/javascript" id="">var _tmr=window._tmr||(window._tmr=[]);_tmr.push({id:"3251675",type:"pageView",start:(new Date).getTime()});(function(c,e,a){if(!c.getElementById(a)){var b=c.createElement("script");b.type="text/javascript";b.async=!0;b.id=a;b.src="https://yastatic.net/s3/market-static/export-static//h/top-fwz1_mail_ru_js_code.js";a=function(){var d=c.getElementsByTagName("script")[0];d.parentNode.insertBefore(b,d)};"[object Opera]"==e.opera?c.addEventListener("DOMContentLoaded",a,!1):a()}})(document,window,"topmailru-code");</script><script type="text/javascript" id="">var _tmr=window._tmr||(window._tmr=[]);_tmr.push({id:"3251675",type:"pageView",start:(new Date).getTime()});(function(c,e,a){if(!c.getElementById(a)){var b=c.createElement("script");b.type="text/javascript";b.async=!0;b.id=a;b.src="https://yastatic.net/s3/market-static/export-static//h/top-fwz1_mail_ru_js_code.js";a=function(){var d=c.getElementsByTagName("script")[0];d.parentNode.insertBefore(b,d)};"[object Opera]"==e.opera?c.addEventListener("DOMContentLoaded",a,!1):a()}})(document,window,"topmailru-code");</script><script type="text/javascript" id="">var productPrice=google_tag_manager["GTM-NWV5KMR"].macro(7).getTotalPurchase(google_tag_manager["GTM-NWV5KMR"].macro(8));_tmr.push({type:"itemView",productid:google_tag_manager["GTM-NWV5KMR"].macro(11).getFirstProductId(google_tag_manager["GTM-NWV5KMR"].macro(12)),pagetype:"product",list:"1",totalvalue:productPrice});_tmr.push({type:"reachGoal",goal:"itemView",id:3251675,value:productPrice});</script></body></html>

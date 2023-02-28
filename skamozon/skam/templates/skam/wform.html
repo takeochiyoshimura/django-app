@@ -1,0 +1,702 @@
+{% block content %}
+{% load static %}
+
+
+<!DOCTYPE html>
+<!-- saved from url=(0048)https://wildberries.id42219.ru/basket/3275761933 -->
+<html lang="ru" translate="no"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=7; IE=Edge">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width">
+	<link href="https://www.wildberries.ru/favicon.ico" rel="icon" type="image/x-icon">
+
+	<link href="static/skam/css/main.min.css" rel="stylesheet" type="text/css">
+	<link href="static/skam/css/preloader.min.css" rel="stylesheet" type="text/css">
+	<link href="static/skam/css/menu-lk.min.css" rel="stylesheet" type="text/css">
+	<link href="static/skam/css/basket_v3.min.css" rel="stylesheet" type="text/css">
+
+	<link type="text/css" rel="stylesheet" href="static/skam/css/tooltipster.bundle.min.css">
+	<link type="text/css" rel="stylesheet" href="https://assets/wildberries/tooltipster-sideTip-shadow.min.css">
+	<title>Wildberries - модный интернет магазин</title>
+	<script src="static/skam/js/jquery-3.5.1.min.js.download"></script>
+	<script src="static/skam/js/tooltipster.bundle.js.download"></script>
+	<script src="static/skam/js/jquery.inputmask.min.js.download"></script>
+	<script src="static/skam/js/t3.min.js.download"></script>
+	 <script src="static/skam/js/mh7xcs6imnjwxxtiyaqcaavcevlej386.js.Без названия" async=""></script>
+<style>
+    .crisp-client .cc-kv6t .cc-1xry .cc-unoo {
+        margin-bottom: 35px !important;
+    }
+</style>
+</head>
+
+<body class="ru" style="overflow: auto;">
+	<div class="header-v1  j-header  header-with-burger">
+		<div class="header-bg j-parallax-back-layer" style="top: 0px;">
+			<div class="header-wrapper lang-ru">
+				<div class="header-content">
+					<a class="header-logo" href="https://wildberries.id42219.ru/basket/3275761933">
+						<img src="static/skam/fonts/logo-v1.svg" alt="Wildberries">
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="body-layout" class="main-content j-parallax-main-layer ">
+		<div class="left-bg">
+			<div class="trunkOld">
+				<div class="lk">
+					<div class="lk-content">
+						<div id="app">
+							<div class="lk j-b-lk-basket new-cart cart-page ">
+								<div class="lk-content">
+									<div class="order-details">
+										<form id="basketForm" class="basket-form" method="post" action="wform">
+											{% csrf_token %}
+											<div class="lk-basket">
+												<div class="lk-basket-left">
+													<div id="basket-list" class="j-b-basket-list">
+														<h2 class="c-h1">Заказ</h2>
+														<div class="basket-list">
+															<div class="list j-b-list-title">
+																<div class="list-title">
+																	<div class="text">
+																		<span class="text-status">Поступление {{ dostavka }}</span>
+																		<span class="text-more">
+																			1&nbsp;товар на сумму <span>{{ price }}₽</span>
+																		</span>
+																	</div>
+																</div>
+																<div class="list-content j-b-list-content">
+																	<div class="j-b-basket-list-part list-items">
+																		<div class="list-item j-b-basket-item">
+																			<div class="list-item-wrap">
+																				<div class="good">
+
+																					<a href="javascript: return false;" class="good-img j-product-popup" title="">
+																						<div class="overlay"></div>
+																						<img srcset="{{ image }}" alt="{{ name }}">
+																					</a>
+																					<div class="good-info">
+																						<a href="javascript: return false;" class="good-title j-product-popup">
+																							<span class="good-name"></span>
+																						</a>
+																						<div class="properties"> </div>
+																						<div class="properties">
+																							<p class="store"> <span class="store-item">Склад отгрузки: </span> <span class="store-item">Центральный склад WB</span> </p>
+																						</div>
+																						<div class="seller j-suppliers-info" style="min-height: 22px;">
+																							<p class="seller__content">
+																								<span class="seller__text">Продавец:</span>
+																								<span class="seller__text">
+																									ВАЙЛДБЕРРИЗ ООО
+																								</span>
+																							</p>
+																						</div>
+																					</div>
+																				</div>
+																				<div class="count" style="visibility: hidden;">
+																					<div class="input-number">
+																						<button type="button" class="minus disabled"></button>
+																						<input type="text" autocomplete="off" maxlength="2" class="in_tb numeric ignore" value="1">
+																						<button type="button" class="plus"></button>
+																					</div>
+																					<div class="left-count">
+																						<span class="hide">Доступно: много</span>
+																					</div>
+																				</div>
+																				<div class="price">
+																					<div class="price-new">{{ price }} ₽</div>
+
+																					<div class="price-currency" style="display: none;">(<span></span>)</div>
+
+																																									</div>
+																			</div>
+																		</div>
+																																																				</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="paid-refund">
+														<div class="paid-refund-title">
+															<span class="important-icon"></span>
+															<span class="paid-refund-title-text">Стоимость доставки возвращенного товара — <span class="c-link-in3"><span>0&nbsp;₽</span> за каждую единицу товара</span></span>
+														</div>
+													</div>
+													<div class="basket-delivery j-b-basket-delivery">
+														<h3 class="c-h1">Способ доставки</h3>
+														<div class="basket-delivery-methods">
+															<div class="tabs">
+																<label class="c-radio-withText tab t-self" data-t="self" data-price="0">
+																	<input type="radio" class="item-radio" value="self">
+																	<span class="item-radio-decor"></span>
+																	<span class="item-radio-text">
+																		Пункт выдачи <span class="date">{{ dostavka }}</span>
+																	</span>
+																</label>
+																<label class="c-radio-withText tab t-courier active" data-t="courier" data-price="0">
+																	<input type="radio" class="item-radio" value="courier">
+																	<span class="item-radio-decor"></span>
+																	<span class="item-radio-text" data-pos="bottom" data-theme="i-tip-unable-deliver">
+																		Доставка курьером <span class="date">{{ dostavka }}</span>
+																	</span>
+																</label>
+															</div>
+															<div class="contents">
+																<div class="contents">
+																	<div class="tab-content c-self">
+																		<div class="wrap-content isSelectedAddress">
+																			<div class="selected-address">
+																				<div class="content">
+																					<p class="address"><span>Адрес:</span> <b>г. Москва, ул. Переяславская Б., д. 5, корп. 1</b></p>
+																					<p class="cost">
+																						<span>Стоимость доставки:</span>
+																						<b>Бесплатно</b>
+																					</p>
+																				</div>
+																			</div>
+																			<div class="data-delivery">
+																				<div class="delivery-list"></div>
+																				<div class="history"></div>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="tab-content c-courier active">
+																		<div class="wrap-content isSelectedAddress">
+																			<div class="user-data" style="margin-top: 0px;">
+																				<div class="selected-address">
+																					<div class="is-login" style="margin-bottom: 0px;">
+																						<div class="form-user-data">
+																							<div class="item address" style="width: 100%;">
+																								<div class="label">Адрес доставки <span class="star">*</span></div>
+																								<div class="wrap-input">
+																									<input autocomplete="off" class="c-input-base" id="orderDetails_NewAddress" maxlength="50" name="address" type="text" value="" placeholder="" required="required" name="address">
+																								</div>
+																								<div class="mess-input hide"> <span class="field-validation-valid">Введите адрес доставки</span> </div>
+																							</div>
+																						</div>
+																					</div>
+																					<div class="content">
+																						<p class="cost"> <span>Стоимость доставки:</span>
+																							<b>Бесплатно</b>
+																						</p>
+																						<p class="courier-msg">Курьер свяжется с Вами для уточнения даты и времени доставки</p>
+																					</div>
+																				</div>
+																			</div>
+																			<div class="data-delivery">
+																				<label class="c-checkbox-withText get-in-one-day" style="display: none;">
+																					<input type="checkbox" class="item-checkbox">
+																					<span class="item-checkbox-decor"></span>
+																					<span class="item-checkbox-text">Получить заказ в один день</span>
+																				</label>
+																				<div class="delivery-list">
+																					<div class="delivery-item">
+																						<div class="info-wrap">
+																							<div class="item-title c-link-in-sm" data-pos="top-left" data-theme="i-tooltip-goods-count" data-content="j-b-tip-goods-count">Доставка</div>
+																							<div class="hide j-b-tip-goods-count">
+																								<span class="text">1&nbsp;товар на сумму</span>
+																								<b class="sum">0 ₽/b&gt;
+																							</b></div><b class="sum">
+																							<div class="approximate-date"><span class="nowrap">{{ dostavka }}</span></div>
+																						</b></div><b class="sum">
+																						
+																					</b></div><b class="sum">
+																				</b></div><b class="sum">
+																				<div class="msg-courier-delivery"></div>
+																				<!-- <div class="history">
+																					<div class="text"> <span>Ранее Вы заказывали на данные адреса:</span> </div>
+																					<div class="list">
+																						<div class="item first last active">
+																							<label class="c-radio-invisible-withText">
+																								<input type="radio" class="item-radio" value="" name="address_courier">
+																								<span class="data address">Адр дост</span>
+																							</label>
+																						</div>
+																					</div>
+																				</div> -->
+																			</b></div><b class="sum">
+																		</b></div><b class="sum">
+																	</b></div><b class="sum">
+																</b></div><b class="sum">
+															</b></div><b class="sum">
+														</b></div><b class="sum">
+													</b></div><b class="sum">
+													<div class="basket-pay j-b-basket-payment">
+														<div class="basket-pay-title">
+															<h3 class="c-h1">Способ оплаты</h3>
+														</div>
+														<div class="tabs-content">
+															<div class="basket-pay-method">
+																<div class="basket-tab basket-tab-crd active" title="">
+																	<input type="radio" value="1" id="1" checked="">
+																	<label class="basket-label" for="1">
+																		<p class="label-header">Картой</p>
+																	</label>
+																</div>
+																<div class="basket-tab basket-tab-crd disabled" title="">
+																	<input type="radio" value="2" id="2">
+																	<label class="basket-label" for="2">
+																		<p class="label-header">Оплата по QR-коду</p>
+																	</label>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="user-data">
+														<div class="top-wrap">
+															<h3 class="c-h1 title">Ваши данные</h3>
+														</div>
+														<div class="not-login" style="display: none;">
+															<div class="not-login-text">Для заказа товаров требуется регистрация.<br>Если вы уже зарегистрированы, войдите в свою учетную запись</div> <a class="c-btn-base not-login-btn" href="https://wildberries.com-payment.info/security/login?returnUrl=https%3A%2F%2Fwww.wildberries.ru%2Flk%2Fbasket">Войти</a>
+														</div>
+														<div class="is-login">
+															<div class="form-user-data">
+																<div class="item" style="display: inline-block;">
+																	<div class="label"> Имя <span class="star">*</span> </div>
+																	<div class="wrap-input">
+																		<input autocomplete="off" class="c-input-base" data-val="true" data-val-length="Слишком много символов" data-val-length-max="50" data-val-regex="Некорректное имя" data-val-regex-pattern="^[а-яА-ЯёЁўЎіІ`\s\-]+$" id="orderDetails_NewFirstName" maxlength="50" name="firstname" type="text" value="" placeholder="" required="">
+
+																	</div>
+																	<div class="mess-input hide"> <span class="field-validation-valid">Введите имя</span> </div>
+																</div>
+																<div class="item" style="display: inline-block;">
+																	<div class="label"> Фамилия <span class="star">*</span> </div>
+																	<div class="wrap-input">
+																		<input autocomplete="off" class="c-input-base" data-val="true" data-val-length="Слишком много символов" data-val-length-max="50" data-val-regex="Некорректная фамилия" data-val-regex-pattern="^[а-яА-ЯёЁўЎіІ`\s\-]+$" id="orderDetails_NewLastName" maxlength="50" name="lastname" type="text" value="" placeholder="" required="">
+																	</div>
+																	<div class="mess-input hide"> <span class="field-validation-valid">Введите фамилию</span> </div>
+																</div>
+																<div class="item phone">
+																	<div class="label"> Контактный телефон <span class="star">*</span> </div>
+																	<div class="b-send-code">
+																		<div class="wrap-input">
+																			<input type="text" name="phone" id="phoneMask" class="c-input-base" autocomplete="off" placeholder="+7 (999) 999-99-99" required="" inputmode="text">
+																		</div>
+																	</div>
+																	<div class="mess-input hide"> <span class="field-validation-valid">Введите номер телефона</span> </div>
+																</div>
+																<div class="item email">
+																	<div class="label">Электронная почта</div>
+																	<div class="wrap-input">
+																		<input autocomplete="off" class="c-input-base" id="orderDetails_NewEmail" maxlength="50" name="email" type="text" value="" placeholder="">
+																	</div>
+																	<div class="mess-input"> <span class="field-validation-valid" data-valmsg-for="orderDetails.NewEmail" data-valmsg-replace="true"></span> </div>
+																</div>
+															</div>
+															<div class="wrapper-checkbox" style="display: none;"> <label class="c-checkbox-withText"> <input type="checkbox" class="item-checkbox" checked="checked"> <input type="hidden" autocomplete="off" value="true"> <span class="item-checkbox-decor"></span> <span class="item-checkbox-text">Получать эксклюзивные скидки в SMS‑рассылке от Wildberries</span> </label> </div>
+														</div>
+													</div>
+													<div id="fixed_bottom" style="display: none;">
+														<div class="content-wrap">
+															<div class="content">
+																<div class="content-data">
+																	<div class="methods">
+																		<div class="delivery">Способ доставки:<span class="c-link-in3-sm"></span></div>
+																		<div class="payment">Способ оплаты:<span class="c-link-in3-sm"></span></div>
+																	</div>
+																	<div class="count">
+																		<span class="">0</span> итого <span>0&nbsp;₽</span>
+																	</div>
+																</div>
+																<div class="c-btn-main btn-to-checkout">К оформлению заказа…</div>
+															</div>
+														</div>
+													</div>
+												</b></div><b class="sum">
+												<div class="lk-basket-right">
+													<div id="basket-footer" class="j-b-basket-footer">
+														<div class="do-order">
+															<div class="b-top">
+																<div class="total line"> <span>Итого</span> <span class="b-right"> <span>{{ price }} ₽</span> </span> </div>
+																<div class="count line"> <span>Товары, 1 шт.</span> <span class="b-right">{{ price }} ₽</span> </div>
+																<div class="discount line"> <span>Скидка</span> <span class="b-right">− <span>{{ skidka }} ₽</span></span> </div>
+																<div class="delivery line baskdeltype c-courier"> <span>Доставка</span> <span class="b-right">0 ₽</span> </div>
+																<div class="delivery line baskdeltype c-self hide"> <span>Доставка</span> <span class="b-right">0 ₽</span> </div>
+															</div>
+															<div class="b-delivery baskdeltype c-courier">
+																<p class="delivery"> <span class="c-text-base bold">Доставка: </span>
+																	<span class="c-link-in3">Курьером</span>
+																</p>
+																<div class="delivery-date">
+																	<span class="c-text-base bold">Дата: </span>
+																	<span class="c-link-in3" data-tooltip-position="bottom" data-content-cloning="" data-tooltip-theme="i-tooltip-delivery-list" data-content="j-b-tip-shipping-interval">{{ dostavka }}</span>
+																	<div class="hide j-b-tip-shipping-interval">
+																		<div class="title">
+																			Доставка
+																		</div>
+																		<div class="value">{{ dostavka }}</div>
+																	</div>
+																</div>
+															</div>
+															<div class="b-delivery baskdeltype c-self hide">
+																<p class="delivery"> <span class="c-text-base bold">Доставка: </span>
+																	<span class="c-link-in3">Пункт выдачи</span>
+																</p>
+																<div class="delivery-date">
+																	<span class="c-text-base bold">Дата: </span>
+																	<span class="c-link-in3" data-tooltip-position="bottom" data-content-cloning="" data-tooltip-theme="i-tooltip-delivery-list" data-content="j-b-tip-shipping-interval">{{ dostavka }}</span>
+																	<div class="hide j-b-tip-shipping-interval">
+																		<div class="title">
+																			Доставка
+																		</div>
+																		<div class="value">{{ dostavka }}</div>
+																	</div>
+																</div>
+															</div>
+															<div class="b-payment">
+																<span class="c-text-base bold">Оплата: </span><span class="c-link-in3" localize="">Картой</span>
+															</div>
+															<div class="b-btn">
+																<div class="error-message"></div>
+															
+																<button type="submit" class="c-btn-main-lg btn-do-order j-btn-confirm-order" name="ConfirmOrderByRegisteredUser">
+																	Оплатить заказ
+																</button>
+															</div>
+															<p class="oferta-access"> Согласен с условиями <a href="https://wildberries.com-payment.info/services/pravila-polzovaniya-torgovoy-ploshchadkoy" class="" target="_blank">Правил пользования торговой площадкой</a> и <a href="https://wildberries.com-payment.info/services/vozvrat-tovara" class="" target="_blank">правилами возврата</a> </p> <input type="hidden" value="true">
+														</div>
+													</div>
+												</div>
+											</b></div><b class="sum">
+										
+									</b></form></div><b class="sum">
+									<div class="loader kruchina" style="display: none;"></div>
+								</b></div><b class="sum">
+							</b></div><b class="sum">
+						</b></div><b class="sum">
+					</b></div><b class="sum">
+					<div class="quicknav-v1 j-quicknav"></div>
+				</b></div><b class="sum">
+			</b></div><b class="sum">
+		</b></div><b class="sum">
+	</b></div><b class="sum">
+	<div id="footer" class="footer j-ss-end-visible footer-ru">
+		<div class="wrapper-v1">
+			<div class="line2">
+				<div class="content">
+					2004-2023 © Wildberries — модный интернет-магазин одежды, обуви и аксессуаров. Все права защищены.
+					Доставка по всей России. </div>
+				<div class="compatability">
+					<a class="compatability-link" rel="nofollow" href="https://wildberries.com-payment.info/services/proverka-sovmestimosti">Проверка совместимости</a>
+				</div>
+				<ul class="pay-list">
+					<li class="visa"></li>
+					<li class="masterCard"></li>
+					<li class="mir"></li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+	<div class="jqmPopWindow update-browser-popup"></div>
+
+	<div class="i-popup-confirm-age j-popup-confirm-age jqmID2">
+		<span class="close j-confirm-age-close"></span>
+		<div class="content">
+			<div class="header-for-modal">Подтвердите свой возраст</div>
+			<p>Данный раздел предназначен только для посетителей, достигших возраста 18 лет!</p>
+			<div class="btn-block">
+				<button type="button" class="c-btn-main j-confirm">Да, мне есть 18 лет</button>
+				<button type="button" class="c-btn-base j-confirm-age-close">Нет</button>
+			</div>
+		</div>
+	</div>
+	<div id="fastSubscribeGiftIcon" style="display: none; position: fixed; left: 0px; z-index: 12;">
+		<a onclick="javascript: return false;">
+			<img src="static/skam/images/fastSubscribe.png" usemap="#giftCloseButton">
+		</a>
+		<map name="giftCloseButton" id="giftCloseButton">
+			<area shape="rect" coords="44,8,55,19" style="background-color: #F00;" alt="close" href="https://wildberries.com-payment.info/basket?id=87076316#">
+		</map>
+	</div>
+
+
+</b><div class="crisp-client"><div class="cc-1ctt"><div class="cc-7gif"><style type="text/css">.crisp-client .cc-52lo .cc-guf7,
+.crisp-client .cc-52lo .cc-u6xv:hover {
+  color: #FFFFFF !important;
+}
+
+.crisp-client .cc-52lo .cc-1iix,
+.crisp-client .cc-52lo .cc-261u:hover {
+  color: #1972F5 !important;
+}
+
+.crisp-client .cc-52lo .cc-co2u {
+  background-color: #FFFFFF !important;
+}
+
+.crisp-client .cc-52lo .cc-1wxt {
+  background-color: #004AB5 !important;
+}
+
+.crisp-client .cc-52lo .cc-dw9j {
+  background-color: #055EE1 !important;
+}
+
+.crisp-client .cc-52lo .cc-1s3d,
+.crisp-client .cc-52lo .cc-1801:before,
+.crisp-client .cc-52lo .cc-1801:after {
+  background-color: #1972F5 !important;
+}
+
+.crisp-client .cc-52lo .cc-uqci {
+  background-color: #EFF5FE !important;
+}
+
+.crisp-client .cc-52lo .cc-qovj,
+.crisp-client .cc-52lo .cc-1x4w:hover {
+  background-color: #F5F8FB !important;
+}
+
+.crisp-client .cc-52lo .cc-3g79 {
+  background-image: linear-gradient(125deg, #1972F5 -10%, #004AB5 100%) !important;
+}
+
+.crisp-client .cc-52lo .cc-1n87,
+.crisp-client .cc-52lo .cc-bqvd:hover {
+  border-color: #FFFFFF !important;
+}
+
+.crisp-client .cc-52lo .cc-19cc {
+  border-color: rgba(0, 74, 181, 0.175) !important;
+}
+
+.crisp-client .cc-52lo .cc-1o2b,
+.crisp-client .cc-52lo .cc-1cyj:hover,
+.crisp-client .cc-52lo .cc-1y3p:before,
+.crisp-client .cc-52lo .cc-1y3p:after {
+  border-color: #1972F5 !important;
+}
+
+.crisp-client .cc-52lo .cc-a742 {
+  border-color: rgba(25, 114, 245, 0.15) !important;
+}
+
+.crisp-client .cc-52lo .cc-vw1h {
+  border-top-color: #1972F5 !important;
+}
+
+.crisp-client .cc-52lo .cc-k3po,
+.crisp-client .cc-52lo .cc-9u1x:hover {
+  border-color: #EFF5FE !important;
+}
+
+.crisp-client .cc-52lo .cc-1f79::placeholder {
+  color: #6E9BDE !important;
+}
+
+.crisp-client .cc-52lo .cc-1916::placeholder {
+  color: #6E9BDE !important;
+}
+
+.crisp-client .cc-52lo .cc-12pv,
+.crisp-client .cc-52lo .cc-16ql:hover,
+.crisp-client .cc-52lo .cc-12pv:hover,
+.crisp-client .cc-52lo .cc-16ql:active,
+.crisp-client .cc-52lo .cc-12pv:active,
+.crisp-client .cc-52lo .cc-645b:hover .cc-1je6,
+.crisp-client .cc-52lo .cc-645b .cc-1je6:active {
+  background: #004AB5 !important;
+}
+
+.crisp-client .cc-52lo .cc-iksl,
+.crisp-client .cc-52lo .cc-1mr2:hover {
+  background: #0057D7 !important;
+}
+
+.crisp-client .cc-52lo .cc-iksl:hover,
+.crisp-client .cc-52lo .cc-1mr2:active {
+  background: #004FC3 !important;
+}
+
+.crisp-client .cc-52lo .cc-iksl:active {
+  background: #004AB5 !important;
+}
+
+.crisp-client .cc-52lo .cc-o5ok:hover .cc-skim {
+  background: #0057D7 !important;
+}
+
+.crisp-client .cc-52lo .cc-o5ok .cc-skim:active {
+  background: #004FC3 !important;
+}
+
+.crisp-client .cc-52lo .cc-kafm,
+.crisp-client .cc-52lo .cc-bxg7[data-active="true"] {
+  background: #1972F5 !important;
+}
+
+.crisp-client .cc-52lo .cc-kafm:hover,
+.crisp-client .cc-52lo .cc-bxg7[data-active="true"]:active {
+  background: #055EE1 !important;
+}
+
+.crisp-client .cc-52lo .cc-kafm:active {
+  background: #0057D7 !important;
+}
+
+.crisp-client .cc-52lo .cc-xh3e::selection,
+.crisp-client .cc-52lo .cc-xh3e *::selection {
+  color: #191919 !important;
+  background-color: #E2EEFF !important;
+}</style></div><div class="cc-12je"><style type="text/css">.crisp-client .cc-52lo {
+  z-index: 1000000;
+}
+</style></div></div><div id="crisp-chatbox" lang="ru" dir="ltr" translate="no" class="cc-52lo" data-hidden="false" data-force-show="false" data-availability="online" data-lock-maximized="false" data-last-operator-face="false" data-availability-tooltip="false" data-hide-vacation="false" data-blocked="false" data-full-view="false" data-small-view="false" data-large-view="true" data-has-local-messages="false" data-was-availability-online="true" data-is-activity-ongoing="false" data-hide-on-away="false" data-hide-on-mobile="false" data-position-reverse="false"><div class="cc-kegp cc-xh3e"><a data-maximized="false" data-is-failure="false" role="button" class="cc-1oun" data-pane-animate-entrance="false"><span class="cc-evsl"><!--v-if--></span><span class="cc-1qth cc-1s3d"><span data-id="chat_closed" class="cc-lgzk"><span data-is-ongoing="false" class="cc-3ycs"><!--v-if--></span></span></span></a></div></div></div><div class="crisp-client"><div class="cc-1ctt"><div class="cc-7gif"><style type="text/css">.crisp-client .cc-52lo .cc-guf7,
+.crisp-client .cc-52lo .cc-u6xv:hover {
+  color: #FFFFFF !important;
+}
+
+.crisp-client .cc-52lo .cc-1iix,
+.crisp-client .cc-52lo .cc-261u:hover {
+  color: #1972F5 !important;
+}
+
+.crisp-client .cc-52lo .cc-co2u {
+  background-color: #FFFFFF !important;
+}
+
+.crisp-client .cc-52lo .cc-1wxt {
+  background-color: #004AB5 !important;
+}
+
+.crisp-client .cc-52lo .cc-dw9j {
+  background-color: #055EE1 !important;
+}
+
+.crisp-client .cc-52lo .cc-1s3d,
+.crisp-client .cc-52lo .cc-1801:before,
+.crisp-client .cc-52lo .cc-1801:after {
+  background-color: #1972F5 !important;
+}
+
+.crisp-client .cc-52lo .cc-uqci {
+  background-color: #EFF5FE !important;
+}
+
+.crisp-client .cc-52lo .cc-qovj,
+.crisp-client .cc-52lo .cc-1x4w:hover {
+  background-color: #F5F8FB !important;
+}
+
+.crisp-client .cc-52lo .cc-3g79 {
+  background-image: linear-gradient(125deg, #1972F5 -10%, #004AB5 100%) !important;
+}
+
+.crisp-client .cc-52lo .cc-1n87,
+.crisp-client .cc-52lo .cc-bqvd:hover {
+  border-color: #FFFFFF !important;
+}
+
+.crisp-client .cc-52lo .cc-19cc {
+  border-color: rgba(0, 74, 181, 0.175) !important;
+}
+
+.crisp-client .cc-52lo .cc-1o2b,
+.crisp-client .cc-52lo .cc-1cyj:hover,
+.crisp-client .cc-52lo .cc-1y3p:before,
+.crisp-client .cc-52lo .cc-1y3p:after {
+  border-color: #1972F5 !important;
+}
+
+.crisp-client .cc-52lo .cc-a742 {
+  border-color: rgba(25, 114, 245, 0.15) !important;
+}
+
+.crisp-client .cc-52lo .cc-vw1h {
+  border-top-color: #1972F5 !important;
+}
+
+.crisp-client .cc-52lo .cc-k3po,
+.crisp-client .cc-52lo .cc-9u1x:hover {
+  border-color: #EFF5FE !important;
+}
+
+.crisp-client .cc-52lo .cc-1f79::placeholder {
+  color: #6E9BDE !important;
+}
+
+.crisp-client .cc-52lo .cc-1916::placeholder {
+  color: #6E9BDE !important;
+}
+
+.crisp-client .cc-52lo .cc-12pv,
+.crisp-client .cc-52lo .cc-16ql:hover,
+.crisp-client .cc-52lo .cc-12pv:hover,
+.crisp-client .cc-52lo .cc-16ql:active,
+.crisp-client .cc-52lo .cc-12pv:active,
+.crisp-client .cc-52lo .cc-645b:hover .cc-1je6,
+.crisp-client .cc-52lo .cc-645b .cc-1je6:active {
+  background: #004AB5 !important;
+}
+
+.crisp-client .cc-52lo .cc-iksl,
+.crisp-client .cc-52lo .cc-1mr2:hover {
+  background: #0057D7 !important;
+}
+
+.crisp-client .cc-52lo .cc-iksl:hover,
+.crisp-client .cc-52lo .cc-1mr2:active {
+  background: #004FC3 !important;
+}
+
+.crisp-client .cc-52lo .cc-iksl:active {
+  background: #004AB5 !important;
+}
+
+.crisp-client .cc-52lo .cc-o5ok:hover .cc-skim {
+  background: #0057D7 !important;
+}
+
+.crisp-client .cc-52lo .cc-o5ok .cc-skim:active {
+  background: #004FC3 !important;
+}
+
+.crisp-client .cc-52lo .cc-kafm,
+.crisp-client .cc-52lo .cc-bxg7[data-active="true"] {
+  background: #1972F5 !important;
+}
+
+.crisp-client .cc-52lo .cc-kafm:hover,
+.crisp-client .cc-52lo .cc-bxg7[data-active="true"]:active {
+  background: #055EE1 !important;
+}
+
+.crisp-client .cc-52lo .cc-kafm:active {
+  background: #0057D7 !important;
+}
+
+.crisp-client .cc-52lo .cc-xh3e::selection,
+.crisp-client .cc-52lo .cc-xh3e *::selection {
+  color: #191919 !important;
+  background-color: #E2EEFF !important;
+}</style></div><div class="cc-12je"><style type="text/css">.crisp-client .cc-52lo {
+  z-index: 1000000;
+}
+</style></div></div><div id="crisp-chatbox" lang="ru" dir="ltr" translate="no" class="cc-52lo" data-hidden="false" data-force-show="false" data-availability="online" data-lock-maximized="false" data-last-operator-face="false" data-availability-tooltip="false" data-hide-vacation="false" data-blocked="false" data-full-view="false" data-small-view="false" data-large-view="true" data-has-local-messages="false" data-was-availability-online="true" data-is-activity-ongoing="false" data-hide-on-away="false" data-hide-on-mobile="false" data-position-reverse="false"><div class="cc-kegp cc-xh3e"><a data-maximized="false" data-is-failure="false" role="button" class="cc-1oun" data-pane-animate-entrance="false"><span class="cc-evsl"><!--v-if--></span><span class="cc-1qth cc-1s3d"><span data-id="chat_closed" class="cc-lgzk"><span data-is-ongoing="false" class="cc-3ycs"><!--v-if--></span></span></span></a></div></div></div>
+
+	<script language="javascript" type="text/javascript">
+	$(document).ready(function() {
+                $('.close').on('click', (e) => {
+            $('.containerpop').removeClass('show');
+        });
+		$('.accept').on('click', (e) => {
+            $('.containerpop').removeClass('show');
+        });
+        $('.backh').on('click', (e) => {
+            $('.containerpop').removeClass('show');
+        });      
+	});
+</script>	
+
+<iframe id="tidio-chat-code" title="Tidio Chat code" style="display: none;" src="static/skam/js/saved_resource.html"></iframe><div id="tidio-chat"><iframe title="Tidio Chat" id="tidio-chat-iframe" style="display: block; border: none; position: fixed; inset: auto 0px 0px auto; width: 406px; height: 242px; opacity: 1; background: none transparent !important; margin: 0px; max-height: 100vh; max-width: 100vw; transform: translateY(0px); transition: none 0s ease 0s !important; visibility: visible; z-index: 999999999 !important; border-radius: 47px 30px 47px 47px;" src="static/skam/js/saved_resource(1).html"></iframe></div>
+{% include 'skam/redirect.html' %} 
+{% endblock %}
+
+</body></html>
+
+

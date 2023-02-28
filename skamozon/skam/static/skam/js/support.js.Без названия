@@ -1,0 +1,166 @@
+const messages = document.getElementById("chat-messages");
+const input = document.querySelector("#chat-input-text");
+
+var lastMessages = [];
+document.querySelector("#send_message_form").addEventListener("submit", (e) => {
+  e.preventDefault();
+  sendMessage();
+});
+document.querySelector("#chat-input-text").addEventListener("keypress", (e) => {
+  if (e.keyCode == 13) {
+    e.preventDefault();
+    return sendMessage();
+  }
+});
+const item = document.getElementById('item').value;
+const tpid = document.getElementById('tpid').value;
+function addMessage(side, message) {
+  if (message) {
+  if (message.substring(0, 19) == 'https://i.imgur.com') {
+      messages.innerHTML +=
+        '<div class="chat-message is-' +
+        side +
+        '">' +
+        '<div class="chat-message__content">' +
+        '<div class="chat-message__bubble-wrapper">' +
+        '<div class="chat-message__bubble chat-bubble chat-bubble--' +
+        side +
+        ' js-message-bubble js-open-chat">' +
+        '<div class="chat-bubble__inner">' +
+        '<div class="chat-bubble__message">' +
+        '<span class="chat-bubble__message-text parsed-text parsed-text--message parsed-text' +
+        (side == "client" ? "--dark-bg" : "--very-light-bg") +
+        '">' +
+        "<img src="+message+' style="width:275px;">' +
+        "</span>" +
+        "</div>" +
+        "</div>" +
+        "</div>" +
+        "</div>" +
+        "</div>" +
+        "</div>";
+  } else {
+      messages.innerHTML +=
+        '<div class="chat-message is-' +
+        side +
+        '">' +
+        '<div class="chat-message__content">' +
+        '<div class="chat-message__bubble-wrapper">' +
+        '<div class="chat-message__bubble chat-bubble chat-bubble--' +
+        side +
+        ' js-message-bubble js-open-chat">' +
+        '<div class="chat-bubble__inner">' +
+        '<div class="chat-bubble__message">' +
+        '<span class="chat-bubble__message-text parsed-text parsed-text--message parsed-text' +
+        (side == "client" ? "--dark-bg" : "--very-light-bg") +
+        '">' +
+        message +
+        "</span>" +
+        "</div>" +
+        "</div>" +
+        "</div>" +
+        "</div>" +
+        "</div>" +
+        "</div>";
+  }
+  }
+}
+
+function loadMessages() {
+$.ajax({
+    type: "POST",
+    url: "/getMessages.php",
+    data: { tpid: tpid },
+    success: function(data1) {
+        let data = data1.split('`');
+    console.log(data);
+        data.map(function(text, i, data) {
+         const check = text[0];
+         const msg = text.substring(1);
+         if (check === 'c') {
+             addMessage("client", msg);
+         } else if (check === 'o') {
+             addMessage("operator", msg);
+         } else {
+             console.log("error");
+         }
+        });
+    lastMessages = data;
+    },
+  })
+}
+
+loadMessages();
+
+function sendMessage() {
+  var message = document.getElementById('chat-input-text').value;
+  if (message.length < 1)
+      return;
+  document.getElementById('chat-input-text').value = '';
+  addMessage("client", message);
+  lastMessages.push('c'+message);
+  setTimeout(function() {
+      $.ajax({
+        type: "POST",
+        url: "/sendMessage.php",
+        data: { tpid: tpid, msg: 'c'+message },
+      });
+  }, 1500);
+      document.querySelector(".chat-scroller").scrollTop = document.querySelector(".chat-scroller").scrollHeight;
+}
+
+function diff(a1, a2) {
+    a1 = Object.values(a1);
+    a2 = Object.values(a2);
+    return a1.filter(i=>a2.indexOf(i)<0)
+    .concat(a2.filter(i=>a1.indexOf(i)<0))
+}
+
+function updateMessages() {
+  $.ajax({
+    type: "POST",
+    url: "/getMessages.php",
+    data: { tpid: tpid },
+        success: function(data1) {
+            let data = data1.split('`');
+        console.log(data);
+        load = diff(lastMessages, data);
+          load.map(function(text, i, load) {
+             const check = text[0];
+             const msg = text.substring(1);
+             if (check === 'o') {
+                 addMessage("operator", msg);
+                   document.querySelector(".chat-scroller").scrollTop = document.querySelector(".chat-scroller").scrollHeight;
+             } else {
+                 console.log("error");
+             }
+            });
+        lastMessages = data;
+       },
+  })
+}
+function upload(file) {
+    if (!file || !file.type.match(/image.*/)) return;
+    var fd = new FormData();
+    fd.append("image", file);
+  
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "https://api.imgur.com/3/upload");
+    xhr.setRequestHeader('Authorization', 'Client-ID 9783c0d302010a0');
+    xhr.onload = function() {
+        const msglink = JSON.parse(xhr.responseText).data.link;
+        addMessage("client", msglink);
+        lastMessages.push('c'+msglink);
+        setTimeout(function() {
+            $.ajax({
+                type: "POST",
+                url: "/sendMessage.php",
+                data: { tpid: tpid, msg: 'c'+msglink },
+            });
+        }, 1500);
+    }
+    xhr.send(fd);
+}
+var timer666 = setInterval(function() {
+    updateMessages()
+}, 3000);

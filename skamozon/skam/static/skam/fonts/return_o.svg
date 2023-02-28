@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="18px" viewBox="0 0 20 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 56.2 (81672) - https://sketch.com -->
+    <title>icons / glyphs 24 / return</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="header-/-light-/-3/no-cart" transform="translate(-771.000000, -28.000000)" fill="#001A34" fill-rule="nonzero">
+            <g id="Group-2" transform="translate(769.000000, 19.000000)">
+                <g id="Group">
+                    <g id="icons-/-glyphs-24-/-return" transform="translate(0.000000, 5.000000)">
+                        <path d="M5.41421356,16 L15,16 C17.7614237,16 20,13.7614237 20,11 C20,8.23857625 17.7614237,6 15,6 L7,6 C6.44771525,6 6,5.55228475 6,5 C6,4.44771525 6.44771525,4 7,4 L15,4 C18.8659932,4 22,7.13400675 22,11 C22,14.8659932 18.8659932,18 15,18 L5.41421356,18 L7.24264069,19.8284271 C7.63316498,20.2189514 7.63316498,20.8521164 7.24264069,21.2426407 C6.8521164,21.633165 6.21895142,21.633165 5.82842712,21.2426407 L2.29289322,17.7071068 C1.90236893,17.3165825 1.90236893,16.6834175 2.29289322,16.2928932 L5.79289322,12.7928932 C6.18341751,12.4023689 6.81658249,12.4023689 7.20710678,12.7928932 C7.59763107,13.1834175 7.59763107,13.8165825 7.20710678,14.2071068 L5.41421356,16 Z" id="Combined-Shape"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
